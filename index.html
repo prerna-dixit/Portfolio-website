@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio - Smart India Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- NProgress -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Floating sparkles for magical effect -->
+    <div class="floating-sparkles">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="toggleTheme">
+        <label for="toggleTheme">🌙</label>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#certificates" class="nav-link">Certificates</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header with cloudy background -->
+    <header class="parallax">
+        <div class="cloud-overlay"></div>
+        <div class="header-content">
+            <h1 class="glitter sparkle-hover">Prerna Dixit</h1>
+            <br>
+            <p class="tagline sparkle-hover">Computer Science Student ~ Gazing at the stars ✨</p>
+            
+            <!-- Hidden Easter Eggs -->
+            <div class="easter-eggs">
+                <div class="easter-egg music-note" data-link="https://open.spotify.com/playlist/0VhcdXt6kuKCS5LeDQ6ZBR" title="pappu's secret playlist">♪</div>
+                <div class="easter-egg instagram-icon" data-link="https://www.instagram.com/prer.naaaah/" title="Follow my journey">📷</div>
+                <div class="easter-egg coffee-icon" data-link="#" title="Powered by coffee">☕</div>
+                <div class="easter-egg japanese-text" data-link="#" title="Dreams Above the Clouds">雲の上の夢</div>
+            </div>
+            
+            <div class="header-sparkles">
+                <span class="header-sparkle"></span>
+                <span class="header-sparkle"></span>
+                <span class="header-sparkle"></span>
+                <span class="header-sparkle"></span>
+                <span class="header-sparkle"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile fade-slide" id="about">
+        <img src="/pappuuuuu.jpeg" alt="pappu's photo" class="profile-pic sparkle-hover">
+        <div class="intro">
+            <h2 class="glitter sparkle-hover">Heeeyyyyeyyey!! I'm Prerna~</h2>
+            <p>A passionate CS student currently going through Java, one data structure at a time.</p>
+            <p>Ready to contribute fresh ideas and technical expertise to make lives easier!</p>
+            <div class="social-links">
+                <a href="https://github.com/prerna-dixit" target="_blank" class="sparkle-hover">GitHub</a>
+                <a href="https://www.linkedin.com/in/prerna-dixit-5860a7354/" target="_blank" class="sparkle-hover">LinkedIn</a>
+                <a href="#" class="sparkle-hover">Email Me: prerna.dixit.44@gmail.c</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-slide">
+        <h2 class="glitter sparkle-hover">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Java Development</h3>
+                <div class="skill-bar">
+                    <span data-skill="Java" data-percentage="90"></span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Data Structures & Algorithms</h3>
+                <div class="skill-bar">
+                    <span data-skill="DSA" data-percentage="50"></span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Python Programming</h3>
+                <div class="skill-bar">
+                    <span data-skill="Python" data-percentage="70"></span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Critical Thinking</h3>
+                <div class="skill-bar">
+                    <span data-skill="Critical Thinking" data-percentage="95"></span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Problem Solving</h3>
+                <div class="skill-bar">
+                    <span data-skill="Problem Solving" data-percentage="88"></span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Team Collaboration</h3>
+                <div class="skill-bar">
+                    <span data-skill="Teamwork" data-percentage="92"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-slide">
+        <h2 class="glitter sparkle-hover">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="card project-card sparkle-hover">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio with pastel theme, animations, and modern design principles using HTML, CSS, and JavaScript.</p>
+                <div class="tech-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+            <div class="card project-card sparkle-hover">
+                <h3>Sorting Algorithm Visualizer</h3>
+                <p>Interactive Java application that visualizes different sorting algorithms with real-time animation and performance metrics.</p>
+                <div class="tech-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Swing</span>
+                    <span class="tag">Algorithms</span>
+                </div>
+            </div>
+            <div class="card project-card sparkle-hover">
+                <h3>Mext GPA Calculator</h3>
+                <p>Java code that calculates GPA based on 3.0 MEXT Level Scale.</p>
+                <div class="tech-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">VSCode</span>
+                    <span class="tag">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="fade-slide">
+        <h2 class="glitter sparkle-hover">Certifications & Achievements</h2>
+        <div class="certificates-grid">
+            <div class="card certificate-card sparkle-hover">
+                <h3>C Programming Certification</h3>
+                <p>C Programming concepts, arrays and strings fundamentals, file handling.</p>
+                <span class="cert-year">2024</span>
+            </div>
+            <div class="card certificate-card sparkle-hover">
+                <h3>Python for Beginners</h3>
+                <p>Python programming, mini projects, and Python fundamentals.</p>
+                <span class="cert-year">2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-slide">
+        <h2 class="glitter sparkle-hover">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p>Feel free to reach out for collaborations, project discussions, or just to say hello!</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="sparkle-hover">Send Message</button>
+                <p id="formMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="backTop" class="sparkle-hover">↑</button>
+
+    <!-- Footer -->
+    <footer class="fade-slide">
+        <p>&copy; 2025 Prerna Dixit | Built with passion</p>
+        <div class="footer-sparkles">
+            <span class="footer-sparkle"></span>
+            <span class="footer-sparkle"></span>
+            <span class="footer-sparkle"></span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
